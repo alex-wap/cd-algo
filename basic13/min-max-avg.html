@@ -1,0 +1,25 @@
+<script>
+  function minMaxAvg(arr){
+    var max = arr[0];
+    var min = arr[0];
+    var avg = arr[0];
+    for( var i = 1; i < arr.length; i++ ){
+      if (arr[i] > max){
+        max = arr[i];
+      }
+
+      if (arr[i] < min){
+        min = arr[i];
+      }
+      
+      avg += arr[i];
+    }
+    console.log("min: " + min);
+    console.log("max: " + max);
+    console.log("avg: " + avg/arr.length);
+  }
+  var arr = [1,4,5,9]
+  minMaxAvg(arr);
+</script>
+
+open in browser and inspect page
