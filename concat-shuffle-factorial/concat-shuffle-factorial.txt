@@ -1,0 +1,28 @@
+function arrConcat(arr,arr2){
+  var newArr = [];
+  for(var i = 0; i < arr.length; i++){
+    newArr.push(arr[i]);
+  }
+  for(var j = 0; i < arr2.length; i++){
+    newArr.push(arr2[i]);
+  }
+  return newArr;
+}
+
+function iFactorial(val){
+  var arr = [0,1];
+  for (var i = 2; i < 8; i++){
+    arr.push(arr[i-1]*i);
+  }
+  return arr[val];
+}
+
+function shuffle(arr){
+  var newArr = [];
+  while(arr.length > 0){
+    var index = Math.floor(Math.random()*arr.length);
+    newArr.push(arr[index]);
+    arr.splice(index, 1);
+  }
+  return newArr;
+}
