@@ -1,0 +1,113 @@
+function oneTo255(){
+    for( var i = 1; i < 256; i++ ){
+      console.log(i);
+    }
+}
+
+function sum0to255(){
+  var sum = 0;
+  for( var i = 0; i < 255; i++ ){
+    sum += i;
+    console.log(sum);
+  }
+}
+
+function arrayMax(arr){
+  var max = arr[0];
+  for( var i = 1; i < arr.length; i++ ){
+    if (arr[i] > max){
+      max = arr[i];
+    }
+  }
+  console.log(max);
+}
+
+function createArrayOfOdds(){
+  var arr = [];
+  for( var i = 1; i < 256; i += 2 ){
+    arr.push(i);
+  }
+  console.log(arr);
+}
+
+function greaterThanY(arr, y){
+  var count = 0;
+  for( var i = 1; i < arr.length; i++ ){
+    if (arr[i] > y){
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+function minMaxAvg(arr){
+  var max = arr[0];
+  var min = arr[0];
+  var avg = arr[0];
+  for( var i = 1; i < arr.length; i++ ){
+    if (arr[i] > max){
+      max = arr[i];
+    }
+
+    if (arr[i] < min){
+      min = arr[i];
+    }
+    
+    avg += arr[i];
+  }
+  console.log("min: " + min);
+  console.log("max: " + max);
+  console.log("avg: " + avg/arr.length);
+}
+
+function stringSwap(arr){
+  for( var i = 0; i < arr.length; i++ ){
+    if (arr[i] < 0){
+      arr[i] = "Dojo";
+    }
+  }
+  console.log(arr);
+}
+
+function printOdds(){
+  for( var i = 1; i < 256; i += 2 ){
+      console.log(i);
+  }
+}
+
+function iterateAndPrintArray(arr){
+  for( var i = 0; i < arr.length; i++ ){
+    console.log(arr[i]);
+  }
+}
+
+function printAvg(arr){
+  var avg = arr[0];
+  for( var i = 1; i < arr.length; i++ ){
+    avg += arr[i];
+  }
+  console.log("avg: " + avg/arr.length);
+}
+
+function squareArray(arr){
+  for( var i = 0; i < arr.length; i++ ){
+    arr[i] *= arr[i];
+  }
+}
+
+function zeroNegatives(arr){
+  for( var i = 0; i < arr.length; i++ ){
+    if (arr[i] < 0){
+      arr[i] = 0;
+    }
+  }
+  console.log(arr);
+}
+
+function shiftArrayValues(arr){
+  for( var i = 0; i < arr.length-1; i++ ){
+    arr[i] = arr[i+1];
+  }
+  arr[arr.length-1] = 0;
+  console.log(arr);
+}
