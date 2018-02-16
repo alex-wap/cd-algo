@@ -9,13 +9,36 @@ function arrConcat(arr,arr2){
   return newArr;
 }
 
+var factorialsArr = [1,1];
+
 function iFactorial(val){
-  var arr = [0,1];
-  for (var i = 2; i < 8; i++){
-    arr.push(arr[i-1]*i);
+  if (val < 0){ return 0; }
+  if (val >= factorialsArr.length){
+    for (var i = factorialsArr.length; i <= val; i++){
+      factorialsArr.push(factorialsArr[i-1]*i);
+      console.log("factorialsArr length is "+ factorialsArr.length);
+    }
   }
-  return arr[val];
+  console.log(factorialsArr[val]);
+  return factorialsArr[val];
 }
+
+console.log(factorialsArr);
+
+iFactorial(6);
+console.log(factorialsArr);
+
+iFactorial(2);
+iFactorial(3);
+iFactorial(4);
+iFactorial(5);
+console.log(factorialsArr);
+
+iFactorial(7);
+console.log(factorialsArr);
+
+iFactorial(8);
+console.log(factorialsArr);
 
 function shuffle(arr){
   var newArr = [];
